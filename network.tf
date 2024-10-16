@@ -3,5 +3,8 @@ resource "aws_vpc" "terraorm" {
     tags = {
     Name = var.vpc-name
   }
+  lifecycle {
+    ignore_changes = [ tags ]
+  }
   
 }
